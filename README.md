@@ -103,21 +103,22 @@ Principales herramientas utilizadas:
 ---
 
 # 📂 Estructura del repositorio
+del-dato-a-la-accion-hackathon
 │
 ├── bloque-1
-│ ├── workspace-fabric
-│ ├── conexiones-datos
-│ └── pipeline-ingesta
+│   ├── workspace-fabric
+│   ├── conexiones-datos
+│   └── pipeline-ingesta
 │
 ├── bloque-2
-│ ├── arquitectura-medallion
-│ └── modelo-semantico
+│   ├── arquitectura-medallion
+│   └── modelo-semantico
 │
 ├── bloque-3
-│ └── powerbi-report
+│   └── powerbi-report
 │
 └── bonus
-└── fabric-data-agent
+    └── fabric-data-agent
 
 ---
 
