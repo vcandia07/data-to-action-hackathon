@@ -105,6 +105,7 @@ del-dato-a-la-accion-hackathon
 ---
 
 # 📊 Flujo de datos
+```
 Data Sources
 │
 ▼
@@ -124,3 +125,4 @@ Semantic Model
 │
 ▼
 Power BI Reports
+```
