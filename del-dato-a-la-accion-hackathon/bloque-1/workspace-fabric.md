@@ -47,15 +47,15 @@ Durante la implementación del entorno se deben considerar aspectos como:
 ## 🏗 Arquitectura esperada
 
 ```
-Lakehouse
+Worksapce
 │
-├── Bronze
+├── Lakehouse_Bronze
 │   └── Datos crudos desde fuentes de origen
 │
-├── Silver
+├── Lakehouse_Silver
 │   └── Datos limpios y transformados
 │
-└── Gold
+└── Lakehouse_Gold
     └── Datos listos para consumo analítico
 ```
 
