@@ -103,6 +103,7 @@ Principales herramientas utilizadas:
 ---
 
 # 📂 Estructura del repositorio
+```
 del-dato-a-la-accion-hackathon
 │
 ├── bloque-1
@@ -119,7 +120,7 @@ del-dato-a-la-accion-hackathon
 │
 └── bonus
     └── fabric-data-agent
-
+```
 ---
 
 # 📊 Flujo de datos
