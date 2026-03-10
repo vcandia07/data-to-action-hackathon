@@ -1,17 +1,7 @@
-<p align="center">
-
-# 🚀 Del Dato a la Acción – Hackatón Microsoft
+# 🚀 Del Dato a la Acción – Hackatón Microsoft Fabric GOVms & DataKnow
 
 Transformando **datos en decisiones** utilizando **Microsoft Fabric, Lakehouse y Power BI**
 
-</p>
-
----
-
-![GitHub repo size](https://img.shields.io/github/repo-size/usuario/del-dato-a-la-accion-hackathon)
-![GitHub last commit](https://img.shields.io/github/last-commit/usuario/del-dato-a-la-accion-hackathon)
-![GitHub stars](https://img.shields.io/github/stars/usuario/del-dato-a-la-accion-hackathon)
-![GitHub issues](https://img.shields.io/github/issues/usuario/del-dato-a-la-accion-hackathon)
 
 ---
 
@@ -38,6 +28,7 @@ Transformar datos en **insights accionables** mediante una arquitectura moderna 
 # 🏗 Arquitectura de Datos
 
 El proyecto sigue el patrón **Medallion Architecture**, ampliamente utilizado en plataformas modernas de datos.
+```
       ┌───────────────┐
       │  Data Sources │
       │ Azure SQL     │
@@ -60,7 +51,7 @@ El proyecto sigue el patrón **Medallion Architecture**, ampliamente utilizado e
          📊 Power BI
         Insights & Reportes
 
-
+```
 ---
 
 # 🧠 Contenido de la Hackatón
@@ -80,16 +71,6 @@ La hackatón está dividida en **3 bloques principales + bonus**.
 ---
 
 # 🛠 Tecnologías utilizadas
-
-<p align="center">
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="50"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" width="50"/>
-<img src="https://img.icons8.com/color/96/power-bi.png" width="50"/>
-
-</p>
-
 Principales herramientas utilizadas:
 
 - Microsoft Fabric
