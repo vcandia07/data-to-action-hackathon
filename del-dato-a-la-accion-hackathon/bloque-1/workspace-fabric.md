@@ -27,7 +27,7 @@ La arquitectura elegida para este desafío es la **Medallion Architecture**, que
 Configurar un entorno de datos en **Microsoft Fabric** que cumpla con las siguientes condiciones:
 
 - Crear un **Workspace** dedicado al proyecto.
-- Implementar un **Lakehouse** que sirva como repositorio central de datos.
+- Implementar **tres Lakehouses** (Bronze, Silver y Gold) que representen cada capa de procesamiento de datos.
 - Diseñar una estructura que represente las capas de la arquitectura **Bronze, Silver y Gold**.
 - Definir una organización de carpetas o tablas que permita separar claramente cada capa de procesamiento.
 
@@ -47,7 +47,7 @@ Durante la implementación del entorno se deben considerar aspectos como:
 ## 🏗 Arquitectura esperada
 
 ```
-Worksapce
+Workspace
 │
 ├── Lakehouse_Bronze
 │   └── Datos crudos desde fuentes de origen
@@ -66,7 +66,7 @@ Worksapce
 Al finalizar el desafío, el entorno debería contar con:
 
 - Un **Workspace configurado en Microsoft Fabric**.
-- Un **Lakehouse creado dentro del Workspace**.
+- Tres **Lakehouses creados dentro del Workspace**.
 - Una estructura inicial que represente las capas **Bronze, Silver y Gold**.
 - Un entorno preparado para comenzar los procesos de **ingesta y transformación de datos** en los siguientes desafíos.
 
@@ -74,9 +74,9 @@ Al finalizar el desafío, el entorno debería contar con:
 
 ## 📚 Recursos recomendados
 
-- Documentación oficial de Microsoft Fabric
-- Conceptos de Lakehouse
-- Arquitectura Medallion
+- [Documentación oficial de Microsoft Fabric](https://learn.microsoft.com/es-es/fabric/get-started/microsoft-fabric-overview)
+- [Conceptos de Lakehouse en Microsoft Fabric](https://learn.microsoft.com/es-es/fabric/data-engineering/lakehouse-overview)
+- [Arquitectura Medallion](https://learn.microsoft.com/es-es/azure/databricks/lakehouse/medallion)
 
 ---
 
