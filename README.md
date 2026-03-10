@@ -1,36 +1,96 @@
+<p align="center">
+
 # 🚀 Del Dato a la Acción – Hackatón Microsoft
 
-Repositorio con los desafíos y ejercicios desarrollados durante la hackatón **"Del Dato a la Acción"** organizada por Microsoft.
+Transformando **datos en decisiones** utilizando **Microsoft Fabric, Lakehouse y Power BI**
 
-El objetivo de este repositorio es documentar el proceso de construcción de una solución de datos end-to-end utilizando **Microsoft Fabric**, aplicando buenas prácticas de **ingeniería de datos, modelado semántico y visualización**.
+</p>
+
+---
+
+![GitHub repo size](https://img.shields.io/github/repo-size/usuario/del-dato-a-la-accion-hackathon)
+![GitHub last commit](https://img.shields.io/github/last-commit/usuario/del-dato-a-la-accion-hackathon)
+![GitHub stars](https://img.shields.io/github/stars/usuario/del-dato-a-la-accion-hackathon)
+![GitHub issues](https://img.shields.io/github/issues/usuario/del-dato-a-la-accion-hackathon)
+
+---
+
+# 📖 Descripción
+
+Este repositorio contiene los **desafíos y soluciones desarrollados durante la hackatón "Del Dato a la Acción" organizada por Microsoft**.
+
+El objetivo es construir una solución **end-to-end de analítica de datos** utilizando **Microsoft Fabric**, desde la **ingesta de datos** hasta la **visualización en Power BI**, aplicando buenas prácticas de **ingeniería de datos y arquitectura moderna**.
 
 ---
 
 # 🎯 Objetivo
 
-Transformar datos en **insights accionables** mediante una arquitectura moderna de datos basada en **Microsoft Fabric**, siguiendo el enfoque de **arquitectura Medallion (Bronze, Silver, Gold)**.
+Transformar datos en **insights accionables** mediante una arquitectura moderna basada en:
+
+- Data Engineering
+- Data Pipelines
+- Lakehouse
+- Modelado Semántico
+- Visualización de datos
+
+---
+
+# 🏗 Arquitectura de Datos
+
+El proyecto sigue el patrón **Medallion Architecture**, ampliamente utilizado en plataformas modernas de datos.
+      ┌───────────────┐
+      │  Data Sources │
+      │ Azure SQL     │
+      │ Blob Storage  │
+      └───────┬───────┘
+              │
+              ▼
+       🟤 Bronze Layer
+    Datos crudos (Raw Data)
+              │
+              ▼
+       ⚙️ Silver Layer
+ Datos limpios y transformados
+              │
+              ▼
+       🟡 Gold Layer
+ Datos listos para análisis
+              │
+              ▼
+         📊 Power BI
+        Insights & Reportes
+
 
 ---
 
 # 🧠 Contenido de la Hackatón
 
-La hackatón está organizada en **3 bloques principales + un desafío bonus**.
+La hackatón está dividida en **3 bloques principales + bonus**.
 
 | Bloque | Desafío | Descripción |
 |------|------|------|
-| 🟤 Bloque 1 | Crear y configurar Workspace y Lakehouse | Creación del entorno de trabajo en Microsoft Fabric y configuración de las capas **Bronze, Silver y Gold** |
-| 🟤 Bloque 1 | Conectarse a fuentes de datos | Conexión a **Azure SQL Database** y **Azure Blob Storage** |
-| 🟤 Bloque 1 | Mi primer Pipeline de ingesta | Construcción de un **pipeline de ingesta de datos** en Microsoft Fabric |
-| ⚙️ Bloque 2 | Arquitectura Medallion | Implementación de la arquitectura **Bronze → Silver → Gold** para procesamiento de datos |
-| ⚙️ Bloque 2 | Mi primer modelo semántico | Creación de un **modelo semántico** para análisis |
-| 📊 Bloque 3 | Creando un informe en Power BI | Construcción de un **reporte analítico en Power BI** |
-| ⭐ Bonus | Fabric Data Agent | Creación de un **Data Agent en Microsoft Fabric** |
+| 🟤 Bloque 1 | Crear y configurar Workspace y Lakehouse | Configuración del entorno de trabajo en Fabric y creación de las capas **Bronze, Silver y Gold** |
+| 🟤 Bloque 1 | Conectarse a fuentes de datos | Integración con **Azure SQL Database** y **Azure Blob Storage** |
+| 🟤 Bloque 1 | Mi primer Pipeline de ingesta | Construcción de un **pipeline de ingesta de datos en Fabric** |
+| ⚙️ Bloque 2 | Arquitectura Medallion | Implementación de la arquitectura **Bronze → Silver → Gold** |
+| ⚙️ Bloque 2 | Mi primer Modelo Semántico | Creación de un **modelo semántico para análisis** |
+| 📊 Bloque 3 | Creando un Informe en Power BI | Construcción de **reportes analíticos en Power BI** |
+| ⭐ Bonus | Creando un Fabric Data Agent | Implementación de un **Data Agent en Microsoft Fabric** |
 
 ---
 
 # 🛠 Tecnologías utilizadas
 
-Este repositorio utiliza tecnologías del ecosistema de datos de Microsoft:
+<p align="center">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" width="50"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" width="50"/>
+<img src="https://img.icons8.com/color/96/power-bi.png" width="50"/>
+
+</p>
+
+Principales herramientas utilizadas:
 
 - Microsoft Fabric
 - Lakehouse
@@ -38,9 +98,46 @@ Este repositorio utiliza tecnologías del ecosistema de datos de Microsoft:
 - Power BI
 - Azure SQL Database
 - Azure Blob Storage
+- Python
 
 ---
 
-# 🏗 Arquitectura
+# 📂 Estructura del repositorio
+│
+├── bloque-1
+│ ├── workspace-fabric
+│ ├── conexiones-datos
+│ └── pipeline-ingesta
+│
+├── bloque-2
+│ ├── arquitectura-medallion
+│ └── modelo-semantico
+│
+├── bloque-3
+│ └── powerbi-report
+│
+└── bonus
+└── fabric-data-agent
 
-El proyecto sigue la **arquitectura Medallion** ampliamente utilizada en plataformas de datos modernas:
+---
+
+# 📊 Flujo de datos
+Data Sources
+│
+▼
+Data Ingestion (Pipelines)
+│
+▼
+Lakehouse - Bronze
+│
+▼
+Lakehouse - Silver
+│
+▼
+Lakehouse - Gold
+│
+▼
+Semantic Model
+│
+▼
+Power BI Reports
