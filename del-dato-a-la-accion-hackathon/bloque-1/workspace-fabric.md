@@ -41,6 +41,7 @@ Durante la implementación del entorno se deben considerar aspectos como:
 - Separación clara entre las capas de procesamiento.
 - Escalabilidad para futuras transformaciones y procesos analíticos.
 - Buenas prácticas de arquitectura de datos en entornos Lakehouse.
+**Nota: Dejar deshabilitada la opcion "Lakehouse Schemas"**
 
 ---
 
