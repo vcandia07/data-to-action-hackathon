@@ -128,7 +128,7 @@ Al finalizar el desafío, el entorno debería contar con:
 
 ## 📎 Recurso de apoyo
 
-Se incluye el notebook de referencia [`notebook-transformacion.ipynb`](./notebook-transformacion.ipynb) con la estructura base y ejemplos de transformación PySpark para guiar la implementación.
+Se incluye el notebook de referencia [`notebook-transformacion.ipynb`](./notebook-transformacion-referencia.ipynb) con la estructura base y ejemplos de transformación PySpark para guiar la implementación.
 
 ---
 
