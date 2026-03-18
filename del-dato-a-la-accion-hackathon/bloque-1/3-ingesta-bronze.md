@@ -19,7 +19,24 @@ Para cubrir ambas fuentes se utilizan dos mecanismos de Fabric:
 
 ---
 
-## 📋 Desafío
+## � Tablas a integrar
+
+### Desde Azure SQL Database → Delta Tables en Lakehouse Bronze
+
+Las siguientes tablas serán copiadas mediante el pipeline y almacenadas como **Delta Tables** en la sección `Tables/` del Lakehouse Bronze:
+
+| Tabla origen (Azure SQL) | Tabla destino (Bronze)    | Descripción                              |
+|--------------------------|---------------------------|------------------------------------------|
+| `SalesOrderHeader`       | `sqls_salesorderheader`   | Encabezados de órdenes de venta          |
+| `SalesOrderDetail`       | `sqls_salesorderdetail`   | Líneas de detalle de órdenes de venta    |
+| `Customer`               | `sqls_customer`           | Datos maestros de clientes               |
+| `Product`                | `sqls_product`            | Catálogo de productos                    |
+
+> 💡 El prefijo `sqls_` identifica el origen de las tablas (Azure **SQL Server**) y facilita la trazabilidad dentro del Lakehouse.
+
+
+
+## ���📋 Desafío
 
 Implementar los dos mecanismos de ingesta hacia el **Lakehouse Bronze**:
 
