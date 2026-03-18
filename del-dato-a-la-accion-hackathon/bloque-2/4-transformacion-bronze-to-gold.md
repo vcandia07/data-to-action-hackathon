@@ -48,7 +48,7 @@ Crear y ejecutar un **Notebook de PySpark** en Microsoft Fabric que implemente e
 2. Eliminar duplicados por `SalesOrderID`
 3. Tratar valores nulos en columnas opcionales
 4. Convertir columnas de fecha al tipo `Date`
-5. Estandarizar el campo `Status` a texto legible (Enviado, En proceso, Otro)
+5. Estandarizar el campo `Status` a texto legible (5=Enviado, 4=En proceso, Otro)
 6. Agregar columna de auditoría `_silver_ingestion_ts`
 7. Escribir resultado como `salesorderheader` en Lakehouse Silver
 
@@ -67,7 +67,7 @@ Crear y ejecutar un **Notebook de PySpark** en Microsoft Fabric que implemente e
 **`sqls_product` → `product`**
 1. Leer tabla `sqls_product` desde Lakehouse Bronze
 2. Estandarizar nombres de producto
-3. Tratar valores nulos en campos opcionales (color, talla, etc.)
+3. Tratar valores nulos en campos  (color, talla, etc.)
 4. Escribir resultado como `product` en Lakehouse Silver
 
 ---

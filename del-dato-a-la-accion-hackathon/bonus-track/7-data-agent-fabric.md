@@ -49,9 +49,6 @@ Crear y configurar un **Data Agent** en Microsoft Fabric conectado al Modelo Sem
   - *"Compara las ventas de este año con las del año anterior."*
 - Verificar que las respuestas son correctas contrastándolas con el informe de Power BI creado previamente.
 
-**Publicación:**
-- Compartir el Data Agent con otros usuarios del workspace.
-- (Opcional) Integrar el agente como un **copiloto** dentro del informe de Power BI del Bloque 3.
 
 ---
 
