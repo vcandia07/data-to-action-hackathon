@@ -60,13 +60,13 @@ La hackatón está dividida en **3 bloques principales + bonus**.
 
 | Bloque | Desafío | Descripción | Enlace |
 |------|------|------|------|
-| 🟤 Bloque 1 | Crear y configurar Workspace y Lakehouse | Configuración del entorno de trabajo en Fabric y creación de las capas **Bronze, Silver y Gold** | [Ver desafío](bloque-1/workspace-fabric.md) |
-| 🟤 Bloque 1 | Conectarse a fuentes de datos | Integración con **Azure SQL Database** y **Azure Blob Storage** | [Ver desafío](bloque-1/conexion-fuentes.md) |
-| 🟤 Bloque 1 | Mi primer Pipeline de ingesta | Construcción de un **pipeline de ingesta de datos en Fabric** | [Ver desafío](bloque-1/ingesta-bronze.md) |
-| ⚙️ Bloque 2 | Arquitectura Medallion | Implementación de la arquitectura **Bronze → Silver → Gold** | [Ver desafío](bloque-2/transformacion-bronze-to-gold.md) |
-| ⚙️ Bloque 2 | Mi primer Modelo Semántico | Creación de un **modelo semántico para análisis** | [Ver desafío](bloque-2/modelo-semantico.md) |
-| 📊 Bloque 3 | Creando un Informe en Power BI | Construcción de **reportes analíticos en Power BI** | [Ver desafío](bloque-3/informe-power-bi.md) |
-| ⭐ Bonus | Creando un Fabric Data Agent | Implementación de un **Data Agent en Microsoft Fabric** | [Ver desafío](bonus-track/data-agent-fabric.md) |
+| 🟤 Bloque 1 | Crear y configurar Workspace y Lakehouse | Configuración del entorno de trabajo en Fabric y creación de las capas **Bronze, Silver y Gold** | [Ver desafío](del-dato-a-la-accion-hackathon/bloque-1/workspace-fabric.md) |
+| 🟤 Bloque 1 | Conectarse a fuentes de datos | Integración con **Azure SQL Database** y **Azure Blob Storage** | [Ver desafío](del-dato-a-la-accion-hackathon/bloque-1/conexion-fuentes.md) |
+| 🟤 Bloque 1 | Mi primer Pipeline de ingesta | Construcción de un **pipeline de ingesta de datos en Fabric** | [Ver desafío](del-dato-a-la-accion-hackathon/bloque-1/ingesta-bronze.md) |
+| ⚙️ Bloque 2 | Arquitectura Medallion | Implementación de la arquitectura **Bronze → Silver → Gold** | [Ver desafío](del-dato-a-la-accion-hackathon/bloque-2/transformacion-bronze-to-gold.md) |
+| ⚙️ Bloque 2 | Mi primer Modelo Semántico | Creación de un **modelo semántico para análisis** | [Ver desafío](del-dato-a-la-accion-hackathon/bloque-2/modelo-semantico.md) |
+| 📊 Bloque 3 | Creando un Informe en Power BI | Construcción de **reportes analíticos en Power BI** | [Ver desafío](del-dato-a-la-accion-hackathon/bloque-3/informe-power-bi.md) |
+| ⭐ Bonus | Creando un Fabric Data Agent | Implementación de un **Data Agent en Microsoft Fabric** | [Ver desafío](del-dato-a-la-accion-hackathon/bonus-track/data-agent-fabric.md) |
 
 ---
 
