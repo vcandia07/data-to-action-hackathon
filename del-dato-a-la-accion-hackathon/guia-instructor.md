@@ -9,12 +9,12 @@
 | # | Desafío | Bloque | Tiempo estimado |
 |---|---------|--------|-----------------|
 | 1 | Configuración del entorno en Microsoft Fabric | Bloque 1 | 20 min |
-| 2 | Conexión a fuentes de datos externas | Bloque 1 | 25 min |
-| 3 | Ingesta de datos hacia Bronze | Bloque 1 | 30 min |
+| 2 | Conexión a fuentes de datos externas | Bloque 1 | 35 min |
+| 3 | Ingesta de datos hacia Bronze | Bloque 1 | 35 min |
 | 4 | Transformación: Bronze → Silver → Gold | Bloque 2 | 45 min |
-| 5 | Mi primer Modelo Semántico | Bloque 2 | 30 min |
-| 6 | Creando un informe en Power BI | Bloque 3 | 30 min |
-| ⭐ | Bonus Track – Data Agent en Fabric | Bonus | 30 min |
+| 5 | Mi primer Modelo Semántico | Bloque 2 | 45 min |
+| 6 | Creando un informe en Power BI | Bloque 3 | 60 min |
+| ⭐ | Bonus Track – Data Agent en Fabric | Bonus | 75 min |
 
 ---
 
