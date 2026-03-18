@@ -39,6 +39,50 @@ Crear y ejecutar un **Notebook de PySpark** en Microsoft Fabric que implemente e
 
 ---
 
+## 🔧 Transformaciones a implementar
+
+### Bronze → Silver
+
+**`sqls_salesorderheader` → `salesorderheader`**
+1. Leer tabla `sqls_salesorderheader` desde Lakehouse Bronze
+2. Eliminar duplicados por `SalesOrderID`
+3. Tratar valores nulos en columnas opcionales
+4. Convertir columnas de fecha al tipo `Date`
+5. Estandarizar el campo `Status` a texto legible (Enviado, En proceso, Otro)
+6. Agregar columna de auditoría `_silver_ingestion_ts`
+7. Escribir resultado como `salesorderheader` en Lakehouse Silver
+
+**`sqls_salesorderdetail` → `salesorderdetail`**
+1. Leer tabla `sqls_salesorderdetail` desde Lakehouse Bronze
+2. Eliminar duplicados por `SalesOrderDetailID`
+3. Validar y corregir cantidades negativas o nulas
+4. Escribir resultado como `salesorderdetail` en Lakehouse Silver
+
+**`sqls_customer` → `customer`**
+1. Leer tabla `sqls_customer` desde Lakehouse Bronze
+2. Tratar valores nulos en campos de email y empresa
+3. Estandarizar formato de nombres (mayúsculas/minúsculas)
+4. Escribir resultado como `customer` en Lakehouse Silver
+
+**`sqls_product` → `product`**
+1. Leer tabla `sqls_product` desde Lakehouse Bronze
+2. Estandarizar nombres de producto
+3. Tratar valores nulos en campos opcionales (color, talla, etc.)
+4. Escribir resultado como `product` en Lakehouse Silver
+
+---
+
+### Silver → Gold
+
+1. Leer tablas `salesorderheader`, `salesorderdetail`, `customer` y `product` desde Lakehouse Silver
+2. Construir `fact_ventas`: join entre `salesorderheader` y `salesorderdetail`, seleccionando columnas clave y métricas
+3. Construir `dim_cliente`: selección y renombre de atributos descriptivos del cliente
+4. Construir `dim_producto`: selección y renombre de atributos descriptivos del producto
+5. Construir `dim_fecha`: generación de tabla de fechas con jerarquía (año, mes, trimestre, semana)
+6. Escribir `fact_ventas`, `dim_cliente`, `dim_producto` y `dim_fecha` en Lakehouse Gold
+
+---
+
 ## 🧠 Consideraciones
 
 - En Fabric, un Notebook puede acceder a múltiples Lakehouses agregándolos como **recursos adicionales** del Notebook.

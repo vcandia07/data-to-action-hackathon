@@ -53,6 +53,66 @@ Crear y configurar un **Modelo Semántico** en Microsoft Fabric siguiendo estos 
 
 ---
 
+## 🗂 Modelo a construir
+
+El modelo sigue un **esquema en estrella** con una tabla de hechos central y tres dimensiones:
+
+```
+                    ┌─────────────────────┐
+                    │     dim_fecha        │
+                    │─────────────────────│
+                    │ 🔑 fecha            │
+                    │    anio             │
+                    │    mes              │
+                    │    nombre_mes       │
+                    │    trimestre        │
+                    │    semana_anio      │
+                    └──────────┬──────────┘
+                               │ 1
+                               │
+┌─────────────────────┐        │        ┌─────────────────────┐
+│     dim_cliente      │        │        │     dim_producto     │
+│─────────────────────│        │        │─────────────────────│
+│ 🔑 id_cliente       │        │        │ 🔑 id_producto      │
+│    nombre_cliente   │        │        │    nombre_producto  │
+│    email            │        │        │    codigo_producto  │
+│    empresa          │        │        │    costo_estandar   │
+└──────────┬──────────┘        │        │    precio_lista     │
+           │ 1                 │        │    color            │
+           │                   │        └──────────┬──────────┘
+           │          ┌────────▼────────┐          │ 1
+           │          │   fact_ventas   │          │
+           │          │────────────────│          │
+           └─────── * │ id_orden       │ * ────────┘
+                      │ id_detalle     │
+                      │ 🔗 id_cliente  │
+                      │ 🔗 id_producto │
+                      │ 🔗 fecha_orden │
+                      │ cantidad       │
+                      │ precio_unit.   │
+                      │ monto_total    │
+                      └────────────────┘
+```
+
+### Relaciones definidas
+
+| Desde (fact_ventas) | Hacia (dimensión) | Tipo | Dirección del filtro |
+|---------------------|-------------------|------|----------------------|
+| `fecha_orden` | `dim_fecha[fecha]` | Muchos a uno (*:1) | Único (dim → fact) |
+| `id_cliente` | `dim_cliente[id_cliente]` | Muchos a uno (*:1) | Único (dim → fact) |
+| `id_producto` | `dim_producto[id_producto]` | Muchos a uno (*:1) | Único (dim → fact) |
+
+### Medidas DAX a crear
+
+| Medida | Descripción | Formato |
+|--------|-------------|---------|
+| `Total Ventas` | Suma el monto total de todas las líneas de venta del contexto de filtro activo | Moneda, 2 decimales |
+| `Ticket Promedio` | Divide el Total Ventas entre el número de líneas de detalle, devolviendo 0 si no hay datos | Moneda, 2 decimales |
+| `Ventas YTD` | Acumula el Total Ventas desde el inicio del año hasta la fecha seleccionada, usando la columna de fecha de `dim_fecha` | Moneda, 2 decimales |
+| `Total Ordenes` | Cuenta la cantidad de órdenes únicas (sin repetición) presentes en el contexto de filtro | Número entero |
+
+---
+
 ## 🧠 Consideraciones
 
 - El Modelo Semántico en Fabric puede generarse **directamente desde el Lakehouse** usando la opción *"New semantic model"* sobre las tablas Gold.
